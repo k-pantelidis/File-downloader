@@ -27,7 +27,7 @@ df = pd.read_csv('filesList.csv')
 save_path = 'save_path'
 mainPath = 'http path of file here'
 
-for i in range(2000, len(df)):
+for i in range(len(df)):
     file_name = df.at[i, 'url']
     URL = mainPath + df.at[i, 'url']
     completeName = os.path.join(save_path, file_name)
