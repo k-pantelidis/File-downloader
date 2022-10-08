@@ -25,8 +25,11 @@ save_path = 'saveFolderHere'
 mainPath = 'https://addPathOfSite/'
 
 for i in range(len(df)):
-    file_name = df.at[i, 'url']
-    URL = mainPath + df.at[i, 'attribute-of-file-name']
-    completeName = os.path.join(save_path, file_name)
-    print("Next file to download is: ", file_name)
-    check(filez=file_name, st=0, completeName=completeName)
+    try:
+        file_name = df.at[i, 'url']
+        URL = mainPath + df.at[i, 'url']
+        completeName = os.path.join(save_path, file_name)
+        print("Next file to download is: ", file_name, " ", datetime.now())
+        check(filez=file_name, st=0, completeName=completeName)
+    except:
+        pass
