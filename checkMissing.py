@@ -13,4 +13,4 @@ for i in range(len(df)):
         count += 1
         print(count)
 
-df.to_csv('missing.csv', index=False)
+df2.to_csv('missing.csv', index=False)
